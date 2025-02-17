@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
 import React from 'react';
@@ -10,7 +10,7 @@ const App = () => {
 
   return (
 
-    <div>
+    <div className='app-container'>
       Hello World from React Redux
       <MyComponent></MyComponent>
     </div>
