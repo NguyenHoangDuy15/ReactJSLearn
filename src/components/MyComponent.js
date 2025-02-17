@@ -33,21 +33,30 @@ class MyComponent extends React.Component {
     });
   };
 
+  handleDeleteUser = (userId) => {
+    let newListUsers = this.state.listUsers;
+    newListUsers = newListUsers.filter((user) => user.id !== userId);
+    this.setState({
+      listUsers: newListUsers,
+    });
+  }
+
   // JSX
   render() {
     // DRY: Don't Repeat Yourself
     return (
-      <div>
+      <>
         <div className="a">
           <AddUserInfor handleAddNewUser={this.handleAddNewUser} />
           <br />
           <DisplayInfor
             listUsers={this.state.listUsers}
             // users={this.state.listUsers}
+            handleDeleteUser={this.handleDeleteUser}
           />
         </div>
         <div className="b"></div>
-      </div>
+      </>
     );
   }
 }
