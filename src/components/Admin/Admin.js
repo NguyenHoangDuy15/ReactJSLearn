@@ -1,8 +1,13 @@
+import SideBar from "./SideBar";
+
 const Admin = (props) => {
-    return (
-      <div>
-        Admin components
+  return (
+    <div className="admin-container">
+      <div className="admin-sidebar">
+        <SideBar />
       </div>
-    );
-  }
-  export default Admin;
+      <div className="admin-content">abc</div>
+    </div>
+  );
+};
+export default Admin;

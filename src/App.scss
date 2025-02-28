@@ -9,9 +9,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (min-width: 3000px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1300px !important;
+  }
+  
+}
+
 .app-container {
   .header-container{
-    .navbar-nav{
+
+    .btn-login{
+      border-radius: 5px;
+      margin-right: 15px;
+      padding: 0 15px;
+      border: 1px solid #535353;
+      height: 40px;
+    }
+    .btn-signup{
+      height: 40px;
+      border-radius: 5px;
+      padding: 0 15px;
+      background-color: #303030;
+      color: white;
+      &:hover{
+        background-color: black;
+    }
+    }
+
+   
+
+    .navbar{
+      padding-top: 30px;
+      z-index: 10;
+      background-color: rgba(0,0,0,0) !important;
       .nav-link{
         &.active{
           color: #00bfff;
@@ -19,4 +50,10 @@ body {
       }
     } 
   }
+}
+
+video {
+  position: fixed;
+  right: 100;
+  width: 100vw;
 }
